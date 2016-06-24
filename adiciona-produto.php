@@ -4,8 +4,21 @@
 
 $nome = $_GET["nome"];
 $preco = $_GET["preco"];
+
+$query  = "insert into produtos (nome,preco) values('{$nome}', {$preco})";
+
+$conexao = mysqli_connect('localhost','root','121294','loja');
+
+if(mysqli_query($conexao,$query)){?>
+    <p class = "alert-success">Produto <?= $nome;?> , <?= $preco;?> adicionado com sucesso.</p>
+
+<?php }else{ ?>
+    <p class = "alert-danger">Produto <?= $nome;?> não foi adicionado.</p>
+
+<?php
+}
 ?>
 
-<p class = "alert-success">Produto <?= $nome;?> , <?= $preco;?> adicionado com sucesso</p>
+
 
 <?php include("rodape.php") ;?>

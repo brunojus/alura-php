@@ -5,10 +5,10 @@ include("conecta.php") ;
 include("banco-produto.php") ;
 
 
-$nome = $_POST["nome"];
-$preco = $_POST["preco"];
-$descricao = $_POST["descricao"];
-$categoria= $_POST["categoria_id"];
+$nome = $_POST['nome'];
+$preco = $_POST['preco'];
+$descricao = $_POST['descricao'];
+$categoria_id = $_POST['categoria_id'];
 
 
 

@@ -11,4 +11,3 @@ function listaCategorias($conexao){
 }
 
 
-?>
